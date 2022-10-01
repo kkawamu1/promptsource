@@ -1,5 +1,21 @@
 dataset: kkawamu1/test
 templates:
+  3fd41daf-b706-4449-84c6-311942ba991c: !Template
+    answer_choices: True ||| False
+    id: 3fd41daf-b706-4449-84c6-311942ba991c
+    jinja: '{{sentence1}} {{sentence2}}
+
+
+      Question: {{question2}} True or False? ||| False'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: question2
+    reference: ''
   fe4e3e68-411c-4d68-9743-f752f0ee1ee2: !Template
     answer_choices: True ||| False
     id: fe4e3e68-411c-4d68-9743-f752f0ee1ee2
