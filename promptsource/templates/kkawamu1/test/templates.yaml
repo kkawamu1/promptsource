@@ -1,0 +1,18 @@
+dataset: kkawamu1/test
+templates:
+  fe4e3e68-411c-4d68-9743-f752f0ee1ee2: !Template
+    answer_choices: True ||| False
+    id: fe4e3e68-411c-4d68-9743-f752f0ee1ee2
+    jinja: '{{sentence1}} {{sentence2}}
+
+
+      Question: {{question1}} True or False? ||| True'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: question1
+    reference: ''
