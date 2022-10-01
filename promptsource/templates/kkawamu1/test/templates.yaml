@@ -16,6 +16,38 @@ templates:
       original_task: true
     name: question2
     reference: ''
+  932a71da-5483-4a87-b718-12a38f710928: !Template
+    answer_choices: True ||| False
+    id: 932a71da-5483-4a87-b718-12a38f710928
+    jinja: '{{sentence1}} {{sentence2}}
+
+
+      Question: {{question2}} False or True? ||| False'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: question2_false_or_true
+    reference: ''
+  cbca6fc7-0b41-48fe-9fc3-a80f0c232b22: !Template
+    answer_choices: True ||| False
+    id: cbca6fc7-0b41-48fe-9fc3-a80f0c232b22
+    jinja: '{{sentence1}} {{sentence2}}
+
+
+      Question: {{question1}} False or True? ||| True'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: question1_false_or_true
+    reference: ''
   fe4e3e68-411c-4d68-9743-f752f0ee1ee2: !Template
     answer_choices: True ||| False
     id: fe4e3e68-411c-4d68-9743-f752f0ee1ee2
