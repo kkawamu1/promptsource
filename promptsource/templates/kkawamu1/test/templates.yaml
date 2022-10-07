@@ -1,122 +1,9 @@
 dataset: kkawamu1/test
 templates:
-  3fd41daf-b706-4449-84c6-311942ba991c: !Template
+  b90113f4-f4fa-4058-85e7-0eb0ac32d53c: !Template
     answer_choices: True ||| False
-    id: 3fd41daf-b706-4449-84c6-311942ba991c
-    jinja: '{{sentence1}} {{sentence2}}
-
-
-      Question: {{question2}} True or False? ||| False'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: question2
-    reference: ''
-  619f7f62-0df1-41ee-b817-7a8005680552: !Template
-    answer_choices: True ||| False
-    id: 619f7f62-0df1-41ee-b817-7a8005680552
-    jinja: '{{sentence1}}
-
-
-      Question: {{question2}} True or False? ||| True'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: baseline_negation_true_or_false
-    reference: ''
-  69d8585b-676e-4429-91ca-eb791c5f9822: !Template
-    answer_choices: True ||| False
-    id: 69d8585b-676e-4429-91ca-eb791c5f9822
-    jinja: '{{sentence1}}
-
-
-      Question: {{question1}} False or True? ||| False'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: baseline_false_or_true
-    reference: ''
-  932a71da-5483-4a87-b718-12a38f710928: !Template
-    answer_choices: True ||| False
-    id: 932a71da-5483-4a87-b718-12a38f710928
-    jinja: '{{sentence1}} {{sentence2}}
-
-
-      Question: {{question2}} False or True? ||| False'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: question2_false_or_true
-    reference: ''
-  9f87dec4-64d4-43b7-a687-db56b9c3a789: !Template
-    answer_choices: True ||| False
-    id: 9f87dec4-64d4-43b7-a687-db56b9c3a789
-    jinja: '{{sentence1}}
-
-
-      Question: {{question2}} False or True? ||| True'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: baseline_negation_false_or_true
-    reference: ''
-  c4ca27a6-71e8-49a1-8a72-3871e8c3f2a6: !Template
-    answer_choices: True ||| False
-    id: c4ca27a6-71e8-49a1-8a72-3871e8c3f2a6
-    jinja: '{{sentence1}}
-
-
-      Question: {{question1}} True or False? ||| False'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: baseline_true_or_false
-    reference: ''
-  cbca6fc7-0b41-48fe-9fc3-a80f0c232b22: !Template
-    answer_choices: True ||| False
-    id: cbca6fc7-0b41-48fe-9fc3-a80f0c232b22
-    jinja: '{{sentence1}} {{sentence2}}
-
-
-      Question: {{question1}} False or True? ||| True'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: question1_false_or_true
-    reference: ''
-  fe4e3e68-411c-4d68-9743-f752f0ee1ee2: !Template
-    answer_choices: True ||| False
-    id: fe4e3e68-411c-4d68-9743-f752f0ee1ee2
-    jinja: '{{sentence1}} {{sentence2}}
-
+    id: b90113f4-f4fa-4058-85e7-0eb0ac32d53c
+    jinja: '{{question1}}
 
       Question: {{question1}} True or False? ||| True'
     metadata: !TemplateMetadata
@@ -126,5 +13,20 @@ templates:
       metrics:
       - Accuracy
       original_task: true
-    name: question1
-    reference: ''
+    name: control_1_affirmative
+    reference: GPT-3 Style
+  f5f587b5-6c8d-4e96-ad27-930565949b78: !Template
+    answer_choices: True ||| False
+    id: f5f587b5-6c8d-4e96-ad27-930565949b78
+    jinja: '{{question2}}
+
+      Question: {{question1}} True or False? ||| False'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_1_negation
+    reference: GPT3-Style
