@@ -14,6 +14,35 @@ templates:
       original_task: true
     name: control_1_negation_can we infer
     reference: ''
+  402b2d90-c12e-4097-8d3c-c965bb6de866: !Template
+    answer_choices: True ||| False
+    id: 402b2d90-c12e-4097-8d3c-c965bb6de866
+    jinja: '{{sentence2}}
+
+      Question: {{question2}} True or False? ||| False'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_2_negation_GPT-3 style
+    reference: ''
+  6a9236a6-0ae1-4a20-b401-4f5516229f01: !Template
+    answer_choices: Yes ||| No
+    id: 6a9236a6-0ae1-4a20-b401-4f5516229f01
+    jinja: Suppose someone said "{{sentence2}}" Can we infer that "{{question2}}"?
+      Yes, or no? ||| No
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_2_negation_can we infer
+    reference: ''
   7808a672-e62d-499c-8498-b373a77e00a1: !Template
     answer_choices: Yes ||| No
     id: 7808a672-e62d-499c-8498-b373a77e00a1
@@ -28,6 +57,20 @@ templates:
       original_task: true
     name: control_1_negation_based on the previous passage
     reference: based on the previous passage
+  8c62cabc-9d62-4a6b-8974-4878ee37d337: !Template
+    answer_choices: Yes ||| No
+    id: 8c62cabc-9d62-4a6b-8974-4878ee37d337
+    jinja: Suppose someone said "{{sentence2}}" Can we infer that "{{question1}}"?
+      Yes, or no? ||| Yes
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_2_affirmative_can we infer
+    reference: ''
   8d26ac39-616f-4f90-8cd2-914b9fa31ba7: !Template
     answer_choices: Yes ||| No
     id: 8d26ac39-616f-4f90-8cd2-914b9fa31ba7
@@ -42,6 +85,34 @@ templates:
       original_task: true
     name: control_1_affirmative_can we infer
     reference: modification of can we infer
+  9a32f86a-7dd4-4706-a015-ae39febcbb15: !Template
+    answer_choices: Yes ||| No
+    id: 9a32f86a-7dd4-4706-a015-ae39febcbb15
+    jinja: '{{sentence2}} Based on the previous passage, is it true that "{{question2}}"?
+      Yes, or no? ||| No'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_2_negation_based on the previous passage
+    reference: ''
+  9b08f65b-06c7-4821-a765-d057cd917a0d: !Template
+    answer_choices: Yes ||| False
+    id: 9b08f65b-06c7-4821-a765-d057cd917a0d
+    jinja: '{{sentence2}} Based on the previous passage, is it true that "{{question1}}"?
+      Yes, or no? ||| Yes'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_2_affirmative_based on the previous passage
+    reference: ''
   a5543cbc-ddd8-4c9d-a040-8de17891a8c9: !Template
     answer_choices: Yes ||| No
     id: a5543cbc-ddd8-4c9d-a040-8de17891a8c9
@@ -71,6 +142,21 @@ templates:
       original_task: true
     name: control_1_affirmative_GPT-3 style
     reference: GPT-3 Style
+  bad53130-1e0d-48dd-8ad4-ff189aab4404: !Template
+    answer_choices: True ||| False
+    id: bad53130-1e0d-48dd-8ad4-ff189aab4404
+    jinja: '{{sentence2}}
+
+      Question: {{question1}} True or False? ||| True'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_2_affirmative_GPT-3 style
+    reference: ''
   f5f587b5-6c8d-4e96-ad27-930565949b78: !Template
     answer_choices: True ||| False
     id: f5f587b5-6c8d-4e96-ad27-930565949b78
