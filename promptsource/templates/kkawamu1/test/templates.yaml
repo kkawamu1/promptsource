@@ -1,5 +1,61 @@
 dataset: kkawamu1/test
 templates:
+  0d159bd7-875a-4a90-b49c-cabf041d9066: !Template
+    answer_choices: Yes ||| No
+    id: 0d159bd7-875a-4a90-b49c-cabf041d9066
+    jinja: Suppose someone said "{{question2}}" Can we infer that "{{question1}}"?
+      Yes, or no? ||| No
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_1_negation_can we infer
+    reference: ''
+  7808a672-e62d-499c-8498-b373a77e00a1: !Template
+    answer_choices: Yes ||| No
+    id: 7808a672-e62d-499c-8498-b373a77e00a1
+    jinja: '{{question2}} Based on the previous passage, is it true that "{{question1}}"?
+      Yes, or no? ||| No'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_1_negation_based on the previous passage
+    reference: based on the previous passage
+  8d26ac39-616f-4f90-8cd2-914b9fa31ba7: !Template
+    answer_choices: Yes ||| No
+    id: 8d26ac39-616f-4f90-8cd2-914b9fa31ba7
+    jinja: Suppose someone said "{{question1}}" Can we infer that "{{question1}}"?
+      Yes, or no? ||| Yes
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_1_affirmative_can we infer
+    reference: modification of can we infer
+  a5543cbc-ddd8-4c9d-a040-8de17891a8c9: !Template
+    answer_choices: Yes ||| No
+    id: a5543cbc-ddd8-4c9d-a040-8de17891a8c9
+    jinja: '{{question1}} Based on the previous passage, is it true that "{{question1}}"?
+      Yes, or no? ||| Yes'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: control_1_affirmative_based on the previous passage
+    reference: ''
   b90113f4-f4fa-4058-85e7-0eb0ac32d53c: !Template
     answer_choices: True ||| False
     id: b90113f4-f4fa-4058-85e7-0eb0ac32d53c
@@ -13,7 +69,7 @@ templates:
       metrics:
       - Accuracy
       original_task: true
-    name: control_1_affirmative
+    name: control_1_affirmative_GPT-3 style
     reference: GPT-3 Style
   f5f587b5-6c8d-4e96-ad27-930565949b78: !Template
     answer_choices: True ||| False
@@ -28,5 +84,5 @@ templates:
       metrics:
       - Accuracy
       original_task: true
-    name: control_1_negation
+    name: control_1_negation_GPT-3 style
     reference: GPT3-Style
