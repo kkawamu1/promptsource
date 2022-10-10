@@ -1,7 +1,7 @@
 dataset: kkawamu1/test_2
 templates:
   11d2b69a-bd40-4165-94b4-95ca0dc2b13b: !Template
-    answer_choices: True |||False
+    answer_choices: True ||| False
     id: 11d2b69a-bd40-4165-94b4-95ca0dc2b13b
     jinja: '{{premise}}
 
@@ -36,4 +36,37 @@ templates:
       - Accuracy
       original_task: true
     name: GPT-3 Style one shot
+    reference: ''
+  7cb91253-04fe-4aa7-9cec-95186c958003: !Template
+    answer_choices: Yes ||| No
+    id: 7cb91253-04fe-4aa7-9cec-95186c958003
+    jinja: '{{context_premise}} Based on the previous passage, is it true that "{{context_hypothesis}}"?
+      Yes, or no? {{ answer_choices[context_label] }}
+
+      ###
+
+      {{premise}} Based on the previous passage, is it true that "{{hypothesis}}"?
+      Yes, or no? ||| {{ answer_choices[label] }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: based on the previous passage one shot
+    reference: ''
+  ed4c9e98-e3ac-438c-ad09-9c235f27641b: !Template
+    answer_choices: Yes ||| No
+    id: ed4c9e98-e3ac-438c-ad09-9c235f27641b
+    jinja: '{{premise}} Based on the previous passage, is it true that "{{hypothesis}}"?
+      Yes, or no? ||| {{ answer_choices[label] }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: based on the previous passage
     reference: ''
