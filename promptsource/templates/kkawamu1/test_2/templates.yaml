@@ -1,0 +1,39 @@
+dataset: kkawamu1/test_2
+templates:
+  11d2b69a-bd40-4165-94b4-95ca0dc2b13b: !Template
+    answer_choices: True |||False
+    id: 11d2b69a-bd40-4165-94b4-95ca0dc2b13b
+    jinja: '{{premise}}
+
+      Question: {{hypothesis}} True, or False? ||| {{ answer_choices[label] }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: GPT-3 Style
+    reference: ''
+  1ff99371-c2ed-4b96-bfdb-9d6c1081455c: !Template
+    answer_choices: True ||| False
+    id: 1ff99371-c2ed-4b96-bfdb-9d6c1081455c
+    jinja: '{{context_premise}}
+
+      Question: {{context_hypothesis}} True, or False? {{ answer_choices[context_label]
+      }}
+
+      ###
+
+      {{premise}}
+
+      Question: {{hypothesis}} True, or False? ||| {{ answer_choices[label] }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: GPT-3 Style one shot
+    reference: ''
