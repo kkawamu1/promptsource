@@ -1,5 +1,34 @@
 dataset: kkawamu1/test_2
 templates:
+  011e10a2-776e-4249-9008-3aa9dfb63ac9: !Template
+    answer_choices: True ||| False
+    id: 011e10a2-776e-4249-9008-3aa9dfb63ac9
+    jinja: '{{second_context_premise}}
+
+      Question: {{second_context_hypothesis}} True, or False? {{ answer_choices[second_context_label]
+      }}
+
+      ###
+
+      {{context_premise}}
+
+      Question: {{context_hypothesis}} True, or False? {{ answer_choices[context_label]
+      }}
+
+      ###
+
+      {{premise}}
+
+      Question: {{hypothesis}} True, or False? ||| {{ answer_choices[label] }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: GPT-3 Style two shot
+    reference: ''
   0f085432-823a-494a-8ad1-4853f69f3979: !Template
     answer_choices: Yes ||| No
     id: 0f085432-823a-494a-8ad1-4853f69f3979
@@ -81,6 +110,23 @@ templates:
       original_task: true
     name: should assume
     reference: ''
+  7421bb9c-d744-4359-a9a0-6c558dca2d4e: !Template
+    answer_choices: Yes ||| No
+    id: 7421bb9c-d744-4359-a9a0-6c558dca2d4e
+    jinja: "{{second_context_premise}} \n\nQuestion: Does this imply that \"{{second_context_hypothesis}}\"\
+      ? Yes, or no? {{answer_choices[second_context_label]}}\n###\n{{context_premise}}\
+      \ \n\nQuestion: Does this imply that \"{{context_hypothesis}}\"? Yes, or no?\
+      \ {{answer_choices[context_label]}}\n###\n{{premise}} \n\nQuestion: Does this\
+      \ imply that \"{{hypothesis}}\"? Yes, or no? ||| {{answer_choices[label]}}"
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: does this imply two shot
+    reference: ''
   7cb91253-04fe-4aa7-9cec-95186c958003: !Template
     answer_choices: Yes ||| No
     id: 7cb91253-04fe-4aa7-9cec-95186c958003
@@ -100,6 +146,24 @@ templates:
       original_task: true
     name: based on the previous passage one shot
     reference: ''
+  7f5e350d-cf26-4d3b-90fd-4f5fb0581f7e: !Template
+    answer_choices: Yes ||| No
+    id: 7f5e350d-cf26-4d3b-90fd-4f5fb0581f7e
+    jinja: "Given {{second_context_premise}} Should we assume that \"{{second_context_hypothesis}}\"\
+      \ is true? Yes, or no? {{ answer_choices[second_context_label] }} \n###\nGiven\
+      \ {{context_premise}} Should we assume that \"{{context_hypothesis}}\" is true?\
+      \ Yes, or no? {{ answer_choices[context_label] }} \n###\nGiven {{premise}} Should\
+      \ we assume that \"{{hypothesis}}\" is true? Yes, or no? ||| {{ answer_choices[label]\
+      \ }} "
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: should assume two shot
+    reference: ''
   a4c91e01-d227-448d-8fec-9681783fc888: !Template
     answer_choices: Yes ||| No
     id: a4c91e01-d227-448d-8fec-9681783fc888
@@ -114,6 +178,31 @@ templates:
       - Accuracy
       original_task: true
     name: does this imply one shot
+    reference: ''
+  d65e8796-26bb-4031-a195-1952feb2aa10: !Template
+    answer_choices: Yes ||| No
+    id: d65e8796-26bb-4031-a195-1952feb2aa10
+    jinja: '{{second_context_premise}} Based on the previous passage, is it true that
+      "{{second_context_hypothesis}}"? Yes, or no? {{ answer_choices[second_context_label]
+      }}
+
+      ###
+
+      {{context_premise}} Based on the previous passage, is it true that "{{context_hypothesis}}"?
+      Yes, or no? {{ answer_choices[context_label] }}
+
+      ###
+
+      {{premise}} Based on the previous passage, is it true that "{{hypothesis}}"?
+      Yes, or no? ||| {{ answer_choices[label] }}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: based on the previous passage two shot
     reference: ''
   ed4c9e98-e3ac-438c-ad09-9c235f27641b: !Template
     answer_choices: Yes ||| No
