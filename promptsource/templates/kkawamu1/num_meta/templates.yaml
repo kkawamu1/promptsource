@@ -1,0 +1,21 @@
+dataset: kkawamu1/num_meta
+templates:
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329b: !Template
+    answer_choices: Less than {{hypothesis}} ||| More than {{hypothesis}}
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329b
+    jinja: '{{premise}}
+
+
+      Question: How many {{obj}} does B have,  less than {{hypothesis}} or more than
+      {{hypothesis}}?
+
+      Answer: ||| {{answer_choices[label]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: prompt
+    reference: ''
