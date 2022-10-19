@@ -1,13 +1,13 @@
 dataset: kkawamu1/num_meta
 templates:
   eb2fbdf4-90c8-4f21-a8ab-034f0b7d329b: !Template
-    answer_choices: Less than {{hypothesis}} ||| More than {{hypothesis}}
+    answer_choices: (a) ||| (b)
     id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329b
     jinja: '{{premise}}
 
-
-      Question: How many {{obj}} does B have,  less than {{hypothesis}} or more than
-      {{hypothesis}}?
+      Question: How many {{obj}} did B eat?  
+      (a): He ate less than {{hypothesis}}.
+      (b): He ate more than {{hypothesis}}.
 
       Answer: ||| {{answer_choices[label]}}'
     metadata: !TemplateMetadata
