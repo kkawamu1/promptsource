@@ -1,15 +1,17 @@
 dataset: kkawamu1/num_meta
 templates:
   eb2fbdf4-90c8-4f21-a8ab-034f0b7d329b: !Template
-    answer_choices: (a) ||| (b)
+    answer_choices: less than {{hypothesis}} ||| more than {{hypothesis}}
     id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329b
-    jinja: '{{premise}}
+    jinja: 'Read the discourse and answer the question.
+    
+    
+    {{premise}}
 
-      Question: How many {{obj}} did B eat?  
-      (a): He ate less than {{hypothesis}}.
-      (b): He ate more than {{hypothesis}}.
 
-      Answer: ||| {{answer_choices[label]}}'
+      Question: How many {{obj}} did {{B}} {{verb}}?
+
+      Answer: {{B}} {{verb_past}}  ||| {{answer_choices[label]}}'
     metadata: !TemplateMetadata
       choices_in_prompt: true
       languages:
@@ -18,4 +20,69 @@ templates:
       - Accuracy
       original_task: true
     name: prompt
+    reference: ''
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329a: !Template
+    answer_choices: less than {{hypothesis}} ||| more than {{hypothesis}}
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329a
+    jinja: 'Read the following conversation and answer the following question.
+    
+    
+    {{premise}}
+
+
+      Question: How many {{obj}} did {{B}} {{verb}}?
+
+      Answer: {{B}} {{verb_past}}  ||| {{answer_choices[label]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: read the following conversation
+    reference: ''
+
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329c: !Template
+    answer_choices: less than {{hypothesis}} ||| more than {{hypothesis}}
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329c
+    jinja: 'Read the following conversation and answer the following question.
+    
+    
+    {{premise}}
+
+
+      Q: How many {{obj}} did {{B}} {{verb}}?
+
+      A: {{B}} {{verb_past}}  ||| {{answer_choices[label]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: Q and A
+    reference: ''
+
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329d: !Template
+    answer_choices: less than {{hypothesis}} ||| more than {{hypothesis}}
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329d
+    jinja: 'Read the discourse and answer the question.
+    
+    
+    {{premise}}
+
+
+      The question is: How many {{obj}} did {{B}} {{verb}}?
+
+      The answer is: {{B}} {{verb_past}}  ||| {{answer_choices[label]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: the question is the answer is
     reference: ''
