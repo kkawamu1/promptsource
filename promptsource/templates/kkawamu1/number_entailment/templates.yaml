@@ -1,0 +1,88 @@
+dataset: kkawamu1/nunber_entailment
+templates:
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329h: !Template
+    answer_choices: '{{A}} ||| {{B}}'
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329h
+    jinja: 'Read the passage and answer the question.
+    
+    
+    {{context}}
+
+
+      Question: {{question}}
+
+      Answer: ||| {{answer_choices[answer]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: read the passage
+    reference: ''
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329g: !Template
+    answer_choices: '{{A}} ||| {{B}}'
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329g
+    jinja: 'Read the following description and answer the following question.
+    
+    
+    {{context}}
+
+
+      Question: {{question}}
+
+      Answer: ||| {{answer_choices[answer]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: read the following description
+    reference: ''
+
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329f: !Template
+    answer_choices: '{{A}} ||| {{B}}'
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329f
+    jinja: 'Read the following passage and answer the following question.
+    
+    
+    {{context}}
+
+
+      Q: {{question}}
+
+      A: ||| {{answer_choices[answer]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: Q and A
+    reference: ''
+
+  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329e: !Template
+    answer_choices: '{{A}} ||| {{B}}'
+    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329e
+    jinja: 'Read the description and answer the question.
+    
+    
+    {{context}}
+
+
+      Q: {{question}}
+
+      A: ||| {{answer_choices[answer]}}'
+    metadata: !TemplateMetadata
+      choices_in_prompt: true
+      languages:
+      - en
+      metrics:
+      - Accuracy
+      original_task: true
+    name: the question is the answer is
+    reference: ''
