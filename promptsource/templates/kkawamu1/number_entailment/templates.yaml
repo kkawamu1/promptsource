@@ -8,7 +8,7 @@ templates:
 
       Question: {{question}} Can you tell me who it is?.
 
-      Answer: ||| {{answer_choices[answer]}}'
+      Answer: Since {{A}} has more than {{B}}, it should be ||| {{answer_choices[answer]}}'
     metadata: !TemplateMetadata
       choices_in_prompt: true
       languages:
@@ -26,7 +26,7 @@ templates:
     
       Question: {{question}} Choose one.
 
-      Answer: ||| {{answer_choices[answer]}}'
+      Answer: Since {{A}} has more than {{B}}, it should be ||| {{answer_choices[answer]}}'
     metadata: !TemplateMetadata
       choices_in_prompt: true
       languages:
@@ -45,7 +45,7 @@ templates:
 
       Q: {{question}} Chose either character.
 
-      A: ||| {{answer_choices[answer]}}'
+      A: Since {{A}} has more than {{B}}, it should be ||| {{answer_choices[answer]}}'
     metadata: !TemplateMetadata
       choices_in_prompt: true
       languages:
@@ -65,7 +65,7 @@ templates:
     Given the passage above and answer the following question.
       The question is: {{question}} Choose one.
 
-      The answer is: ||| {{answer_choices[answer]}}'
+      The answer is: Since {{A}} has more than {{B}}, it should be ||| {{answer_choices[answer]}}'
     metadata: !TemplateMetadata
       choices_in_prompt: true
       languages:
