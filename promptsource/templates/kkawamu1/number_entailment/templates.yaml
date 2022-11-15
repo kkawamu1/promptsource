@@ -1,140 +1,140 @@
 dataset: kkawamu1/nunber_entailment
 templates:
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329h: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329h
-    jinja: 'In this story, there will be two characters. Your task is to answer the question given the following context: {{context}}
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329h: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329h
+  #   jinja: 'In this story, there will be two characters. Your task is to answer the question given the following context: {{context}}
 
 
-      Question: {{question}} Can you tell me who it is?
+  #     Question: {{question}} Can you tell me who it is?
 
-      Answer: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: Can you tell me who it is?
-    reference: ''
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329g: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329g
-    jinja: '{{context}}
+  #     Answer: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: Can you tell me who it is?
+  #   reference: ''
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329g: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329g
+  #   jinja: '{{context}}
 
     
-      Question: {{question}} Choose one.
+  #     Question: {{question}} Choose one.
 
-      Answer: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: Choose one
-    reference: ''
+  #     Answer: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: Choose one
+  #   reference: ''
 
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329f: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329f
-    jinja: '{{context}}
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329f: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329f
+  #   jinja: '{{context}}
     
 
-      Q: {{question}} Chose either character.
+  #     Q: {{question}} Chose either character.
 
-      A: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: Chose either character
-    reference: ''
+  #     A: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: Chose either character
+  #   reference: ''
 
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329e: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329e
-    jinja: '{{context}}
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329e: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329e
+  #   jinja: '{{context}}
 
 
-    Given the passage above and answer the following question.
-      The question is: {{question}}
+  #   Given the passage above and answer the following question.
+  #     The question is: {{question}}
 
-      The answer is: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: Given the passage above
-    reference: ''
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329i: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329i
-    jinja: 'Read the passage about two characters carefully, and please answer the question.
+  #     The answer is: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: Given the passage above
+  #   reference: ''
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329i: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329i
+  #   jinja: 'Read the passage about two characters carefully, and please answer the question.
     
 
-    {{context}}
+  #   {{context}}
 
 
-      Question: {{question}}
+  #     Question: {{question}}
 
-      Answer: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: Read the passage about two characters carefully
-    reference: ''
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329j: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329j
-    jinja: '{{context}}
+  #     Answer: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: Read the passage about two characters carefully
+  #   reference: ''
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329j: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329j
+  #   jinja: '{{context}}
 
 
-      Given the passge above, please answer the follwoing question to the best of your ability.
-      Question: {{question}}
+  #     Given the passge above, please answer the follwoing question to the best of your ability.
+  #     Question: {{question}}
 
-      Answer: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: please answer the follwoing question to the best of your ability
-    reference: ''
+  #     Answer: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: please answer the follwoing question to the best of your ability
+  #   reference: ''
 
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329k: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329k
-    jinja: '{{context}}
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329k: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329k
+  #   jinja: '{{context}}
     
 
-      Answer the following question by logical reasoning.
-      Q: {{question}}
+  #     Answer the following question by logical reasoning.
+  #     Q: {{question}}
 
-      A: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: Answer the following question by logical reasoning
-    reference: ''
+  #     A: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: Answer the following question by logical reasoning
+  #   reference: ''
 
   eb2fbdf4-90c8-4f21-a8ab-034f0b7d329l: !Template
     answer_choices: '{{A}} ||| {{B}}'
@@ -196,24 +196,24 @@ templates:
     name: First, please read the paragraph below
     reference: ''
 
-  eb2fbdf4-90c8-4f21-a8ab-034f0b7d329o: !Template
-    answer_choices: '{{A}} ||| {{B}}'
-    id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329o
-    jinja: '{{context}}
+  # eb2fbdf4-90c8-4f21-a8ab-034f0b7d329o: !Template
+  #   answer_choices: '{{A}} ||| {{B}}'
+  #   id: eb2fbdf4-90c8-4f21-a8ab-034f0b7d329o
+  #   jinja: '{{context}}
     
 
-      Q: {{question}} What is the best guess? 
+  #     Q: {{question}} What is the best guess? 
 
-      A: ||| {{answer_choices[answer]}}'
-    metadata: !TemplateMetadata
-      choices_in_prompt: true
-      languages:
-      - en
-      metrics:
-      - Accuracy
-      original_task: true
-    name: What is the best guess? 
-    reference: ''
+  #     A: ||| {{answer_choices[answer]}}'
+  #   metadata: !TemplateMetadata
+  #     choices_in_prompt: true
+  #     languages:
+  #     - en
+  #     metrics:
+  #     - Accuracy
+  #     original_task: true
+  #   name: What is the best guess? 
+  #   reference: ''
 
   eb2fbdf4-90c8-4f21-a8ab-034f0b7d329p: !Template
     answer_choices: '{{A}} ||| {{B}}'
